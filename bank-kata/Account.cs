@@ -21,6 +21,7 @@ namespace bank_kata {
 
         public void printStatement() {
             printer.print(HEADER);
+            
         }
     }
 }
