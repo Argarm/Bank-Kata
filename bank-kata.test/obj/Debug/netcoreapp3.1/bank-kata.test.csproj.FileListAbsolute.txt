@@ -1,0 +1,4 @@
+C:\Users\Aaron\Desktop\Personal\Bank-Kata\bank-kata.test\obj\Debug\netcoreapp3.1\bank-kata.test.csprojAssemblyReference.cache
+C:\Users\Aaron\Desktop\Personal\Bank-Kata\bank-kata.test\obj\Debug\netcoreapp3.1\bank-kata.test.AssemblyInfoInputs.cache
+C:\Users\Aaron\Desktop\Personal\Bank-Kata\bank-kata.test\obj\Debug\netcoreapp3.1\bank-kata.test.AssemblyInfo.cs
+C:\Users\Aaron\Desktop\Personal\Bank-Kata\bank-kata.test\obj\Debug\netcoreapp3.1\bank-kata.test.csproj.CoreCompileInputs.cache

@@ -1,14 +1,12 @@
+using System;
 using NUnit.Framework;
 
 namespace bank_kata.test {
-    public class Tests {
-        [SetUp]
-        public void Setup() {
-        }
-
+    public class AccountShould {
+        
         [Test]
         public void Test1() {
-            Assert.Pass();
+
         }
     }
 }
