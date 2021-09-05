@@ -16,7 +16,7 @@ namespace bank_kata.test {
             timeProvider = Substitute.For<ITimeProvider>();
             transactionStore = new TransactionStore(timeProvider);
             account = new Account(printer,transactionStore);
-            timeProvider.getTodayAsString().Returns("10-01-2012", "13-01-2012", "14-01-2012");
+            timeProvider.getTodayAsString().Returns("10/01/2012", "13/01/2012", "14/01/2012");
 
             account.deposit(1000);
             account.deposit(2000);
