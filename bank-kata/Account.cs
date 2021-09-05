@@ -4,6 +4,7 @@ namespace bank_kata {
     public class Account : AccountService {
         public IPrinter printer;
         public ITransactionStore transactionStore;
+        const string HEADER = "Date || Amount || Balance";
 
         public Account(IPrinter printer, ITransactionStore transactionStore) {
             this.printer = printer;
@@ -19,8 +20,7 @@ namespace bank_kata {
         }
 
         public void printStatement() {
-            printer.print("Date || Amount || Balance");
-            
+            printer.print(HEADER);
         }
     }
 }
