@@ -38,5 +38,21 @@ namespace bank_kata.test {
             printer.Received(1).print("05/09/2021 || 100 || 100");
         }
 
+        [Test]
+        public void print_statement_when_two_deposit_has_ocurred() {
+            printer = Substitute.For<IPrinter>();
+            timeProvider = Substitute.For<ITimeProvider>();
+            transactionStore = Substitute.For<ITransactionStore>(null);
+            account = new Account(printer, transactionStore);
+
+            account.deposit(100);
+            account.deposit(100);
+            account.printStatement();
+
+            printer.Received(1).print("Date || Amount || Balance");
+            printer.Received(1).print("05/09/2021 || 100 || 100");
+            printer.Received(1).print("05/09/2021 || 100 || 200");
+        }
+
     }
 }
