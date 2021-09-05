@@ -14,7 +14,7 @@ namespace bank_kata.test {
         public void print_statement_containing_all_transactions() {
             printer = Substitute.For<IPrinter>();
             timeProvider = Substitute.For<ITimeProvider>();
-            transactionStore = Substitute.For<ITransactionStore>(null);
+            transactionStore = new TransactionStore(timeProvider);
             account = new Account(printer,transactionStore);
             timeProvider.getTodayAsString().Returns("10-01-2012", "13-01-2012", "14-01-2012");
 
