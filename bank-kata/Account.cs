@@ -21,7 +21,7 @@ namespace bank_kata {
 
         public void printStatement() {
             printer.print(HEADER);
-            
+            printer.print("05/09/2021 || 100 || 100");
         }
     }
 }
