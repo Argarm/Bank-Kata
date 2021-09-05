@@ -19,6 +19,7 @@ namespace bank_kata {
         }
 
         public void printStatement() {
+            printer.print("Date || Amount || Balance");
             
         }
     }
