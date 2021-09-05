@@ -18,7 +18,8 @@ namespace bank_kata {
         }
 
         public void AddWithdraw(int amount) {
-            throw new NotImplementedException();
+            balance -= amount;
+            StoreTransaction(timeProvider.getTodayAsString(),-amount);
         }
 
         public List<Transaction> getAllTransactions() {

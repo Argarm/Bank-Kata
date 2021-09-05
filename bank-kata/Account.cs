@@ -19,7 +19,7 @@ namespace bank_kata {
         }
 
         public void withdraw(int amount) {
-
+            transactionStore.AddWithdraw(amount);
         }
 
         public void printStatement() {
