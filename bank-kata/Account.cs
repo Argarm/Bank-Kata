@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using System.Linq;
+using System.Transactions;
 using bank_kata.Interfaces;
 
 namespace bank_kata {
@@ -12,7 +15,7 @@ namespace bank_kata {
         }
 
         public void deposit(int amount) {
-
+            transactionStore.AddDeposit(amount);
         }
 
         public void withdraw(int amount) {
@@ -21,7 +24,9 @@ namespace bank_kata {
 
         public void printStatement() {
             printer.print(HEADER);
-            printer.print("05/09/2021 || 100 || 100");
+            foreach (var transaction in transactionStore.getAllTransactions()) {
+                printer.print(transaction.ToString());
+            }
         }
     }
 }

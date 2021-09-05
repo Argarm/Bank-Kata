@@ -42,8 +42,9 @@ namespace bank_kata.test {
         public void print_statement_when_two_deposit_has_ocurred() {
             printer = Substitute.For<IPrinter>();
             timeProvider = Substitute.For<ITimeProvider>();
-            transactionStore = Substitute.For<ITransactionStore>(null);
+            transactionStore = new TransactionStore(timeProvider);
             account = new Account(printer, transactionStore);
+            timeProvider.getTodayAsString().Returns("05/09/2021", "05/09/2021");
 
             account.deposit(100);
             account.deposit(100);
